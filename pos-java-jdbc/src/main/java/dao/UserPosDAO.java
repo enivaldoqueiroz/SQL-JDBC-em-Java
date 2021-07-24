@@ -21,11 +21,10 @@ public class UserPosDAO {
 	public void salvar(Userposjava userposjava) {
 		
 		try {
-			String sql = "insert into userposjava (id, nome, email) values (?,?,?)";
+			String sql = "insert into userposjava ( nome, email) values (?,?)";
 			PreparedStatement insert = connection.prepareStatement(sql);
-			insert.setLong(1, userposjava.getId());
-			insert.setString(2, userposjava.getNome());
-			insert.setString(3,userposjava.getEmail());
+			insert.setString(1, userposjava.getNome());
+			insert.setString(2,userposjava.getEmail());
 			insert.execute();
 			connection.commit();//salva no banco
 			

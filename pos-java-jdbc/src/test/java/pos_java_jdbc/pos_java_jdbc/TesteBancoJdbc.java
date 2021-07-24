@@ -12,17 +12,17 @@ import model.Userposjava;
 public class TesteBancoJdbc {
 	
 	@Test
-	/*public void initBanco() {
+	public void initBanco() {
 		//SingleConnection.getConnection();
 		UserPosDAO userPosDAO = new UserPosDAO();
 		Userposjava userposjava = new Userposjava();
 		
-		userposjava.setId(5L);
-		userposjava.setNome("Pedro");
-		userposjava.setEmail("pedro@gmail.com");
+		//suserposjava.setId(5L);
+		userposjava.setNome("Teste");
+		userposjava.setEmail("teste@gmail.com");
 		
 		userPosDAO.salvar(userposjava);
-	}*/
+	}
 	
 	
 	public void initList() {
