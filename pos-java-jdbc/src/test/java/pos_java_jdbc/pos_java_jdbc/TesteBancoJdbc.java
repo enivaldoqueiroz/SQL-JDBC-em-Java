@@ -1,5 +1,6 @@
 package pos_java_jdbc.pos_java_jdbc;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.junit.Test;
@@ -48,6 +49,20 @@ public class TesteBancoJdbc {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	@Test
+	public void initAtualizar() {
+		
+		try {
+			UserPosDAO dao = new UserPosDAO();
+			Userposjava objetoBanco = dao.buscar(5L);
+			objetoBanco.setNome("Nome mudado com metodo atualizar");
+			dao.atualizar(objetoBanco);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 }
