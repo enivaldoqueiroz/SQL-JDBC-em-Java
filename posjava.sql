@@ -1,3 +1,18 @@
+--Inner JOIN
+
+select nome, numero, email from telefoneuser as fone
+inner join userposjava as userp
+on fone.usuariopessoa = userp.id
+where userp.id = 8;
+
+select * from telefoneuser as fone
+inner join userposjava as userp
+on fone.usuariopessoa = userp.id;
+
+select * from userposjava uu, telefoneuser tt
+where uu.id = tt.usuariopessoa
+and uu.id in (1,8);
+
 --Realizando insert na tabela telefones
 insert into userposjava (nome, email) 
 values ('alex Fernando', 'alex@gmail.com');
@@ -13,10 +28,6 @@ select * from telefoneuser;
 
 select * from userposjava uu
 where uu.id = 8;
-
-select * from userposjava uu, telefoneuser tt
-where uu.id = tt.usuariopessoa
-and uu.id in (1,8);
 
 alter table telefoneuser alter column id set default nextval('userposjava'::regclass);
 
