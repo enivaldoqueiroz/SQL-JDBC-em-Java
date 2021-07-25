@@ -1,3 +1,10 @@
+--Deletar dados
+
+delete from userposjava where id = 3;
+delete from telefoneuser tt where tt.usuariopessoa = 3;
+
+select * from telefoneuser tt where tt.usuariopessoa = 3;
+select * from userposjava;
 --Inner JOIN
 
 select nome, numero, email from telefoneuser as fone
