@@ -1,5 +1,16 @@
+alter table telefoneuser alter column id set default nextval('userposjava'::regclass);
+
+create sequence user_telefone_seq
+increment 1
+minvalue 1
+maxvalue 9999999999999999
+start 1;
+alter table user_telefone_seq
+owner to postgres;
+
 alter table telefoneuser add foreign key (usuariopessoa) references userposjava (id);
 
+--Criando a tabela telefoneuser
 create table telefoneuser
 (
 	id bigint not null,
