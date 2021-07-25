@@ -5,8 +5,18 @@ values ('alex Fernando', 'alex@gmail.com');
 insert into telefoneuser (numero, tipo, usuariopessoa)
 values ('(85) 9999-8888', 'celular', 8);
 
+insert into telefoneuser (numero, tipo, usuariopessoa)
+values ('(85) 7777-7777', 'celular', 1);
+
 select * from userposjava;
 select * from telefoneuser;
+
+select * from userposjava uu
+where uu.id = 8;
+
+select * from userposjava uu, telefoneuser tt
+where uu.id = tt.usuariopessoa
+and uu.id in (1,8);
 
 alter table telefoneuser alter column id set default nextval('userposjava'::regclass);
 
