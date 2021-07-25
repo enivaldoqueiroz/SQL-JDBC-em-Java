@@ -1,3 +1,13 @@
+--Realizando insert na tabela telefones
+insert into userposjava (nome, email) 
+values ('alex Fernando', 'alex@gmail.com');
+
+insert into telefoneuser (numero, tipo, usuariopessoa)
+values ('(85) 9999-8888', 'celular', 8);
+
+select * from userposjava;
+select * from telefoneuser;
+
 alter table telefoneuser alter column id set default nextval('userposjava'::regclass);
 
 create sequence user_telefone_seq
